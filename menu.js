@@ -29,10 +29,15 @@
     user might filter by, like 'gluten-free' or
     'kids'
 */
-
 //CODE HERE
-
-
+const pizza = {
+    name: 'Lightyear',
+    price: 10,
+    category: 'entree',
+    popularity: 2,
+    rating: 8,
+    tags: ['buzz','woody','toy','zurg']
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -41,9 +46,8 @@
     First, log the popularity of pizza. 
     Use dot notation to access the value.
 */
-
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -51,9 +55,8 @@
     Use a combination of dots and brackets to
     get the value.
 */
-
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -61,19 +64,18 @@
     
     Print the value of your new price variable.
 */
-
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
     property.
-
     Print the value of your category variable. 
 */
-
 //CODE HERE
-
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -86,10 +88,23 @@
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
-
 //CODE HERE
+class foodClass {
+    constructor(name, price, category, popularity, rating, tags){
+        this.name = name
+        this.price = price
+        this.category = category
+        this.popularity = popularity
+        this.rating = rating
+        this.tags = tags
+    }
+}
+let burger = new foodClass('Buzz Burger',7,'entree',4,7,['burgers','buns','meat'])
+let hotDog = new foodClass('Slink',4,'entree',8,5,['dog','slinky','ketchup','wiener'])
+let nachos = new foodClass('Nice Nachos',8,'appetizer',5,6,['chips','salsa','cheese'])
+let iceCream = new foodClass('Space Cream',4,'dessert',3,4,['cold','sweet','chocolate'])
 
-
+let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -104,7 +119,17 @@
 */
 
 //CODE HERE
+const result = foodArr.filter(obj => {
+    return obj.tags === 'cheese'
+})
+console.log(result)
 
+// foodArr.forEach(food => {
+//     for(let tags.includes('cheese') in food) {
+//         console.log(food)
+//     }
+// })
+//foodArr.forEach(foodClass)
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 

@@ -168,4 +168,6 @@ deals[0].title=`10% Off!`
 */
 
 //CODE HERE
-let newDesc = desc.replace(March, April)
+deals[1].desc = deals[1].desc.replace('March', 'April')
+
+console.log (deals)

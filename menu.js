@@ -89,22 +89,56 @@ console.log(category)
     data in some functions that you'll write.
 */
 //CODE HERE
-class foodClass {
-    constructor(name, price, category, popularity, rating, tags){
-        this.name = name
-        this.price = price
-        this.category = category
-        this.popularity = popularity
-        this.rating = rating
-        this.tags = tags
-    }
+// class foodClass {
+//     constructor(name, price, category, popularity, rating, tags){
+//         this.name = name
+//         this.price = price
+//         this.category = category
+//         this.popularity = popularity
+//         this.rating = rating
+//         this.tags = tags
+//     }
+// }
+// let burger = new foodClass('Buzz Burger',7,'entree',4,7,['burgers','buns','meat','cheese'])
+// let hotDog = new foodClass('Slink',4,'entree',8,5,['dog','slinky','ketchup','wiener'])
+// let nachos = new foodClass('Nice Nachos',8,'appetizer',5,6,['chips','salsa','cheese'])
+// let iceCream = new foodClass('Space Cream',4,'dessert',3,4,['cold','sweet','chocolate'])
+
+const burger = {
+    name: 'Buzz Burger',
+    price: 7,
+    category: 'entree',
+    popularity: 4,
+    rating: 7,
+    tags: ['burgers','buns','meat','cheese']
 }
-let burger = new foodClass('Buzz Burger',7,'entree',4,7,['burgers','buns','meat'])
-let hotDog = new foodClass('Slink',4,'entree',8,5,['dog','slinky','ketchup','wiener'])
-let nachos = new foodClass('Nice Nachos',8,'appetizer',5,6,['chips','salsa','cheese'])
-let iceCream = new foodClass('Space Cream',4,'dessert',3,4,['cold','sweet','chocolate'])
+const hotDog = {
+    name: 'Slink',
+    price: 4,
+    category: 'entree',
+    popularity: 8,
+    rating: 5,
+    tags: ['dog','slinky','ketchup','wiener']
+}
+const nachos = {
+    name: 'Nice Nachos',
+    price: 8,
+    category: 'appetizer',
+    popularity: 5,
+    rating: 6,
+    tags: ['chips','salsa','cheese']
+}
+const iceCream = {
+    name: 'Space Cream',
+    price: 4,
+    category: 'dessert',
+    popularity: 3,
+    rating: 4,
+    tags: ['cold','sweet','chocolate']
+}
 
 let foodArr = [pizza, burger, hotDog, nachos, iceCream]
+
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -119,10 +153,39 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 */
 
 //CODE HERE
+//My code returns all objects, cannot uncover the secret
 const result = foodArr.filter(obj => {
-    return obj.tags === 'cheese'
+    let newArr = []
+    for(let tags in obj){
+        if(tags.includes('cheese')){
+            newArr.push(obj)
+        }
+    }
+    return newArr
 })
 console.log(result)
+
+// const result = foodArr.filter(obj => {
+//     if(obj.tags(foodArr)){
+//         return obj
+//     }
+// })
+// console.log(result)
+
+// const result = (arr, tag, callback) => {
+//     arr.forEach((element) => {
+//         if(element.tags.includes('cheese')){
+//             return element
+//         }
+//     })
+// }
+
+// const result = foodArr.filter(obj(tags, 'cheese') => {
+//     let newArr = []
+//     newArr.push(obj)
+//     return newArr
+// })
+// console.log(result)
 
 // foodArr.forEach(food => {
 //     for(let tags.includes('cheese') in food) {
@@ -174,7 +237,10 @@ console.log(result)
 */
 
 //CODE HERE
-
+function filterByProperty(property,number,type) {
+    let filtArr= []
+    foodArr.filter()
+}
 
 /*
     Invoke the `filterByProperty` function passing

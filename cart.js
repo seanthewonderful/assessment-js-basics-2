@@ -64,7 +64,12 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    let newTotal = cartTotal + (cartTotal*tax)
+    let couponTotal = newTotal - couponValue
+    return couponTotal
+}
+console.log(calcFinalPrice(10,2,0.08))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,8 +93,12 @@ console.log(summedPrice)
 */
 
 /*
-    TEXT ANSWER HERE
-
+   Customer Object for cart page includes: Name, Address, Zip Code, Phone, Email. These seem like basic items needed for an online checkout. 
+   customer.name is a string because it must be for text
+   customer.address is also a string, though the customer.zipCode is a number so that I can verify delivery information without having to extract it from the address string.
+   customer.phone is a number, although in an advanced scenario I would have to either specify that they enter as such, otherwise it could be taken as a string and extract the number, since most people may type the - between number sets.
+   customer.email is a string because it must be for text. I could also program a verificatin method to make sure the email has valid characters '@' and '.'
+   
 */
 
 /*
@@ -97,4 +106,10 @@ console.log(summedPrice)
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'Sean',
+    address: '212 Happy St. Lehi UT',
+    zipCode: 84044,
+    phone: 9495559999,
+    email: 'grunt@umpire.com'
+}

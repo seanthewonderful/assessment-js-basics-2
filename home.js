@@ -59,7 +59,17 @@ const canWeDeliver = (zipCode) => {
         console.log(`Sorry, you are not eligible for delivery`)
     }
 }
-//canWeDeliver(85205)
+canWeDeliver(85205)
+
+// const canWeDeliverOne = (zipCode) => {
+//     let inZone = false
+
+//     deliveryAreaZipCodes.forEach((ele) =>{
+//         if(zipCode === ele){
+//             inZone = true
+//         }
+//     })
+// }
 
 /*
     Problem 2 Continued

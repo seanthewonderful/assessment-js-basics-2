@@ -47,7 +47,7 @@ const pizza = {
     Use dot notation to access the value.
 */
 //CODE HERE
-console.log(pizza.popularity)
+//console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -56,7 +56,7 @@ console.log(pizza.popularity)
     get the value.
 */
 //CODE HERE
-console.log(pizza.tags[1])
+//console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -66,7 +66,7 @@ console.log(pizza.tags[1])
 */
 //CODE HERE
 let {price} = pizza
-console.log(price)
+//console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -75,7 +75,7 @@ console.log(price)
 */
 //CODE HERE
 let {category} = pizza
-console.log(category)
+//console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -138,7 +138,7 @@ const iceCream = {
 }
 
 let foodArr = [pizza, burger, hotDog, nachos, iceCream]
-
+//console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -154,16 +154,20 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 //CODE HERE
 //My code returns all objects, cannot uncover the secret
-const result = foodArr.filter(obj => {
-    let newArr = []
-    for(let tags in obj){
-        if(tags.includes('cheese')){
-            newArr.push(obj)
-        }
-    }
-    return newArr
-})
-console.log(result)
+// const result = foodArr.filter(obj => {
+//     let newArr = []
+//     for(let tags in obj){
+//         if(tags.includes('cheese')){
+//             newArr.push(obj)
+//         }
+//     }
+//     return newArr
+// })
+// console.log(result)
+
+// const filteredFood = foodArr.filter((element, index) => {
+//     console.log(element, index)
+// })
 
 // const result = foodArr.filter(obj => {
 //     if(obj.tags(foodArr)){
@@ -195,7 +199,10 @@ console.log(result)
 //foodArr.forEach(foodClass)
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-
+const filteredFood = foodArr.filter((item) => {
+    return item.tags.includes('cheese')
+})
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -229,7 +236,7 @@ console.log(result)
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -237,10 +244,28 @@ console.log(result)
 */
 
 //CODE HERE
-function filterByProperty(property,number,type) {
-    let filtArr= []
-    foodArr.filter()
-}
+//filterBy('price', 20, 'above')
+//checking for everything with a price above 20
+//filterBy('popularity', 2, 'below')
+//checking for everything with a popularity below 2
+const filterByProperty(property, number, type => {
+    const filtered = foodArr.filter((element) => {
+        if(type==='above'){
+            if(element[property]>number){
+
+            }
+        }
+    })
+})
+
+
+
+
+
+// function filterByProperty(property,number,type) {
+//     let filtArr= []
+//     foodArr.filter()
+// }
 
 /*
     Invoke the `filterByProperty` function passing

@@ -34,8 +34,18 @@ const cart = [
 ]
 
 //CODE HERE
+let initialValue = 0
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+// const summedPrice = cart.reduce(() => {
+//     return price.cart[0] + price.cart[1] + price.cart[2]
+// })
+// console.log(summedPrice())
+
+let summedPrice = cart.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue.price
+}, initialValue)
+
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////

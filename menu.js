@@ -158,8 +158,6 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 
 
-
-
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 

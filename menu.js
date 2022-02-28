@@ -153,50 +153,13 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 */
 
 //CODE HERE
-//My code returns all objects, cannot uncover the secret
-// const result = foodArr.filter(obj => {
-//     let newArr = []
-//     for(let tags in obj){
-//         if(tags.includes('cheese')){
-//             newArr.push(obj)
-//         }
-//     }
-//     return newArr
-// })
-// console.log(result)
 
-// const filteredFood = foodArr.filter((element, index) => {
-//     console.log(element, index)
-// })
 
-// const result = foodArr.filter(obj => {
-//     if(obj.tags(foodArr)){
-//         return obj
-//     }
-// })
-// console.log(result)
 
-// const result = (arr, tag, callback) => {
-//     arr.forEach((element) => {
-//         if(element.tags.includes('cheese')){
-//             return element
-//         }
-//     })
-// }
 
-// const result = foodArr.filter(obj(tags, 'cheese') => {
-//     let newArr = []
-//     newArr.push(obj)
-//     return newArr
-// })
-// console.log(result)
 
-// foodArr.forEach(food => {
-//     for(let tags.includes('cheese') in food) {
-//         console.log(food)
-//     }
-// })
-//foodArr.forEach(foodClass)
+
+
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 

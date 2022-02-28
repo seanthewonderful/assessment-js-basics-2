@@ -199,10 +199,7 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 //foodArr.forEach(foodClass)
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-const filteredFood = foodArr.filter((item) => {
-    return item.tags.includes('cheese')
-})
-console.log(filteredFood)
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -249,9 +246,8 @@ console.log(filteredFood)
 //filterBy('popularity', 2, 'below')
 //checking for everything with a popularity below 2
 const filterByProperty(property, number, type => {
-    const filtered = foodArr.filter((element) => {
-        if(type==='above'){
-            if(element[property]>number){
+    const filtered = foodArr.filter(type => 
+        type==='above'
 
             }
         }

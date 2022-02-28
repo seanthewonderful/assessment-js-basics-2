@@ -22,10 +22,9 @@
 */
 
 //CODE HERE
-greetUser = (userName) => {return `Welcome back, ${userName}`}
+greetUser = (userName) => `Welcome back, ${userName}`
 
-//console.log(greetUser('Lord Viceroy of the Admiralty'))
-
+console.log(greetUser('Lord Viceroy of the Admiralty'))
 
 
 
@@ -54,12 +53,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 //CODE HERE
 const canWeDeliver = (zipCode) => {
     if(deliveryAreaZipCodes.includes(zipCode)){
-        console.log(`You are eligible for delivery`)
+        return `You are eligible for delivery`
     }else {
-        console.log(`Sorry, you are not eligible for delivery`)
+        return `Sorry, you are not eligible for delivery`
     }
 }
-canWeDeliver(85205)
+
+console.log(canWeDeliver(85205))
 
 // const canWeDeliverOne = (zipCode) => {
 //     let inZone = false
@@ -88,14 +88,22 @@ canWeDeliver(85205)
     Name your new function `canWeDeliverTwo`.
 */
 
-function canWeDeliverTwo(zipCode) {
-    if(deliveryAreaZipCodes.indexOf(zipCode) !== -1){
-        console.log(`Yes`)
-    }else {
-        console.log(`No`)
-    }
+function canWeDeliverTwo(zipCode){
+    for(i=0; i<deliveryAreaZipCodes.length; i++){
+        if(zipCode===deliveryAreaZipCodes[i]){
+            return "Yes we can deliver"
+        }
+    }return "No way Jose"
 }
-canWeDeliverTwo(85211)
+
+// function canWeDeliverTwo(zipCode) {
+//     if(deliveryAreaZipCodes.indexOf(zipCode) !== -1){
+//         console.log(`Yes`)
+//     }else {
+//         console.log(`No`)
+//     }
+// }
+console.log(canWeDeliverTwo(85206))
 
 //tried below first, could not figure out on my own so found a new method online used above
 // function canWeDeliverTwo(zipCode) {
@@ -178,6 +186,6 @@ deals[0].title=`10% Off!`
 */
 
 //CODE HERE
-deals[1].desc = deals[1].desc.replace('March', 'April')
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
 
 console.log (deals)

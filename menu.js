@@ -245,15 +245,6 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 //checking for everything with a price above 20
 //filterBy('popularity', 2, 'below')
 //checking for everything with a popularity below 2
-const filterByProperty(property, number, type => {
-    const filtered = foodArr.filter(type => 
-        type==='above'
-
-            }
-        }
-    })
-})
-
 
 
 

@@ -154,13 +154,11 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 //CODE HERE
 
+const filteredFood = foodArr.filter(element => {
+    tags.contains(element)
+})
 
-
-
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+filteredFood("cheese")
 
 //////////////////PROBLEM 5////////////////////
 /* 

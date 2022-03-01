@@ -154,11 +154,48 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(element => {
-    tags.contains(element)
-})
+function filteredFood(element => {
+    
+}) {
 
-filteredFood("cheese")
+}
+
+// My attempt - must filter through foodArr and look for 
+// const filteredFood = foodArr.filter(element => {
+//     tags.contains(element==='cheese')
+// })
+
+// const filteredFood = foodArr.filter(element =>{
+//     if(foodArr.tags.includes(element))
+//     console.log(Object)
+// })
+
+// const filteredFood = foodArr.filter(element => element.tags === 'cheese')
+
+// const filteredFood = foodArr.filter(foodArr.tags.contains('cheese'))
+
+//console.log(filteredFood('cheese'))
+
+
+//Gabriels attempts below
+// const filteredFood = foodArr.filter((item) => item.tags === 'cheese');
+// console.log(filteredFood);
+
+
+// const filteredFood = foodArr.forEach(obj => {
+//     obj.tags.filter(element => element === 'cheese')
+// })
+
+// const filteredFood = foodArr.forEach((obj) => {
+//     obj.tags.filter((item) => {
+//       if (item === 'cheese') {
+//         console.log(obj);
+//       }
+//     });
+//   });
+
+// filteredFood
+
 
 //////////////////PROBLEM 5////////////////////
 /* 

@@ -154,13 +154,23 @@ let foodArr = [pizza, burger, hotDog, nachos, iceCream]
 
 //CODE HERE
 
-function filteredFood(element => {
-    
-}) {
+const filteredFood = foodArr.filter((foodObj) => {
+    if(foodObj.tags.includes('cheese')) {
+    }return foodObj
+})
 
-}
+// function filteredFood(foodArr) {
+//     for(let i=0; i<foodArr.length; i++) {
+//         if(foodArr[i].tags.contains('cheese')){
+//     }return foodArr[i]
+// }
+// }
+// console.log(filteredFood())
 
-// My attempt - must filter through foodArr and look for 
+
+// Pseudo - iterate through array, at each index, jump into the index's(object's) 
+// key, search key values, if a value matches input, return the object
+
 // const filteredFood = foodArr.filter(element => {
 //     tags.contains(element==='cheese')
 // })
@@ -237,6 +247,23 @@ function filteredFood(element => {
 */
 
 //CODE HERE
+
+function filterByProperty(property, number, type) {
+    //let filteredArr = []
+    let filteredArr = foodArr.filter((element) => {
+        if(type === 'above'){
+            return element[property]>number
+        }else if(type === 'below'){
+            return element[property]<number
+        }
+    })
+    return filteredArr
+}
+
+
+
+
+
 //filterBy('price', 20, 'above')
 //checking for everything with a price above 20
 //filterBy('popularity', 2, 'below')
